@@ -438,6 +438,42 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiWorkExperienceWorkExperience
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'work_experiences';
+  info: {
+    displayName: 'Work Experience';
+    pluralName: 'work-experiences';
+    singularName: 'work-experience';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    company: Schema.Attribute.String & Schema.Attribute.Required;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.RichText & Schema.Attribute.Required;
+    enddate: Schema.Attribute.Date;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::work-experience.work-experience'
+    > &
+      Schema.Attribute.Private;
+    location: Schema.Attribute.String;
+    logo: Schema.Attribute.Media<'images' | 'files', true>;
+    publishedAt: Schema.Attribute.DateTime;
+    startdate: Schema.Attribute.Date & Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    url: Schema.Attribute.String;
+  };
+}
+
 export interface PluginContentReleasesRelease
   extends Struct.CollectionTypeSchema {
   collectionName: 'strapi_releases';
@@ -949,6 +985,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::project.project': ApiProjectProject;
+      'api::work-experience.work-experience': ApiWorkExperienceWorkExperience;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

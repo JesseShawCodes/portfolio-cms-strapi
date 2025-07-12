@@ -43,6 +43,9 @@
     },
     "url": {
       "type": "string"
+    },
+    "technologies": {
+      "type": "json"
     }
   }
 }

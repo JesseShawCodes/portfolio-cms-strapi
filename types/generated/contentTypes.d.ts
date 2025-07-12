@@ -499,6 +499,7 @@ export interface ApiWorkExperienceWorkExperience
     logo: Schema.Attribute.Media<'images' | 'files', true>;
     publishedAt: Schema.Attribute.DateTime;
     startdate: Schema.Attribute.Date & Schema.Attribute.Required;
+    technologies: Schema.Attribute.JSON;
     title: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &

@@ -14,10 +14,10 @@
     "name": {
       "type": "string"
     },
-    "Description": {
+    "description": {
       "type": "richtext"
     },
-    "Link": {
+    "link": {
       "type": "string"
     },
     "logo": {

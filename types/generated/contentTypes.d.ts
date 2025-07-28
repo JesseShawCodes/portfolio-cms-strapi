@@ -501,6 +501,7 @@ export interface ApiWorkExperienceWorkExperience
     location: Schema.Attribute.String;
     logo: Schema.Attribute.Media<'images' | 'files', true>;
     publishedAt: Schema.Attribute.DateTime;
+    secondarytechnologies: Schema.Attribute.JSON;
     startdate: Schema.Attribute.Date & Schema.Attribute.Required;
     technologies: Schema.Attribute.JSON;
     title: Schema.Attribute.String & Schema.Attribute.Required;

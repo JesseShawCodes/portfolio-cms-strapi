@@ -46,6 +46,9 @@
     },
     "technologies": {
       "type": "json"
+    },
+    "secondarytechnologies": {
+      "type": "json"
     }
   }
 }

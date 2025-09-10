@@ -1,0 +1,14 @@
+{
+  "kind": "singleType",
+  "collectionName": "github_projects",
+  "info": {
+    "singularName": "github-project",
+    "pluralName": "github-projects",
+    "displayName": "Github Project"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {}
+}

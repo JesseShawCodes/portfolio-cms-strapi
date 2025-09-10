@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "repos",
+  "info": {
+    "singularName": "repo",
+    "pluralName": "repos",
+    "displayName": "Repo"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "pinned": {
+      "type": "boolean",
+      "default": false
+    },
+    "url": {
+      "type": "string"
+    }
+  }
+}
